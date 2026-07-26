@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedagogical Friction & Tertiary Algorithmicity | Interactive Literature Review</title>
+  <meta name="description" content="An interactive, digitally immersive, and gamified literature review extension grounded in Chapters 1-3 of Micah J. Miner's doctoral dissertation proposal at National Louis University.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-shell">
+    
+    <!-- Navigation Header -->
+    <nav class="app-nav" aria-label="Main Navigation">
+      <div class="shell-container nav-inner">
+        <a href="#hero" class="brand-link">
+          <span>micah<span class="text-gold">.</span>miner</span>
+          <span class="brand-badge">Lit Review Hub</span>
+        </a>
+        <ul class="nav-menu">
+          <li><button class="nav-item-btn active" data-module="module-1" aria-current="page">01 / Media Ecology</button></li>
+          <li><button class="nav-item-btn" data-module="module-2">02 / Crucible</button></li>
+          <li><button class="nav-item-btn" data-module="module-3">03 / Friction Lab</button></li>
+          <li><button class="nav-item-btn" data-module="module-4">04 / Citation Nexus</button></li>
+          <li><button class="nav-item-btn" data-module="module-5">05 / Deep Reader</button></li>
+          <li><button class="nav-item-btn" data-module="module-6">06 / Handoff Summary</button></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+      <div class="shell-container hero-grid">
+        <div>
+          <span class="section-tag font-mono">Dissertation Proposal Extension · Chapters 1–3</span>
+          <h1 class="hero-title">Pedagogical Friction & <span class="text-gold">Tertiary Algorithmicity</span></h1>
+          <p class="hero-subtitle">An interactive, digitally immersive, and gamified literature review exploring how K–12 educators navigate learning, authorship, and cognitive resistance under conditions of generative AI.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn-primary" onclick="document.querySelector('[data-module=\'module-3\']').click()">Launch Practitioner Lab</button>
+            <button class="btn-secondary" onclick="document.querySelector('[data-module=\'module-5\']').click()">Read Chapters 1–3 Synthesis</button>
+          </div>
+        </div>
+
+        <!-- Quest Tracker -->
+        <div class="quest-tracker-card">
+          <div class="quest-card-header">
+            <span class="quest-card-title">Scholarly Quest Tracker</span>
+            <span id="quest-progress-text" class="font-mono text-muted" style="font-size: 0.75rem;">0 / 4 Quests</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div id="quest-progress-fill" class="progress-bar-fill"></div>
+          </div>
+          <div class="badges-row">
+            <span id="badge-mediaEcologist" class="badge-pill font-mono">🌐 Media Ecologist</span>
+            <span id="badge-criticalTechnoskeptic" class="badge-pill font-mono">⚖️ Technoskeptic</span>
+            <span id="badge-frictionArchitect" class="badge-pill font-mono">⚙️ Friction Architect</span>
+            <span id="badge-methodologicalSage" class="badge-pill font-mono">📜 Methodologist</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT MODULES -->
+    <main class="shell-container" style="flex: 1;">
+
+      <!-- MODULE 1: Media Ecology Journey & Ruptures -->
+      <section id="module-1" class="module-section active-module">
+        <div class="section-header">
+          <span class="section-tag">Module 01 / Theoretical Apparatus</span>
+          <h2 class="section-heading">The Media Ecology 5-Stage Journey</h2>
+          <p class="section-desc">Trace Walter Ong's developmental account of communication media and explore Micah Miner's extensions into Algorithmic Secondary Orality and Tertiary Algorithmicity.</p>
+        </div>
+
+        <!-- Timeline Cards -->
+        <div id="timeline-stages" class="timeline-stages"></div>
+
+        <!-- Detail Panel -->
+        <div id="stage-detail-panel" class="stage-detail-panel"></div>
+
+        <!-- Ruptures & Pressures Grid -->
+        <div class="section-header" style="margin-top: 50px; margin-bottom: 20px;">
+          <span class="section-tag text-rust">Diagnostic Hinge</span>
+          <h3 style="font-size: 1.8rem;">Ruptured Ong Assumptions & Media-Ecological Pressures</h3>
+        </div>
+        <div class="ruptures-pressures-grid">
+          <div>
+            <h4 style="font-family: var(--mjm-mono); font-size: 0.9rem; text-transform: uppercase; color: var(--mjm-rust); margin-bottom: 14px;">3 Ruptured Ong Assumptions (Miner, 2026b)</h4>
+            <div id="ruptures-container" style="display: flex; flex-direction: column; gap: 16px;"></div>
+          </div>
+          <div>
+            <h4 style="font-family: var(--mjm-mono); font-size: 0.9rem; text-transform: uppercase; color: var(--mjm-violet); margin-bottom: 14px;">4 Pressures of Tertiary Algorithmicity</h4>
+            <div id="pressures-container" style="display: flex; flex-direction: column; gap: 16px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 2: Dialectical Crucible -->
+      <section id="module-2" class="module-section">
+        <div class="section-header">
+          <span class="section-tag">Module 02 / Literature Synthesis</span>
+          <h2 class="section-heading">The Dialectical Crucible Matrix</h2>
+          <p class="section-desc">Explore four foundational theoretical streams and see how they converge into the Pedagogical Friction Framework.</p>
+        </div>
+
+        <div id="crucible-grid" class="crucible-grid"></div>
+        <div id="stream-detail-box" style="background: var(--mjm-surface); border: 1px solid var(--mjm-line); border-radius: var(--radius-md); padding: 28px; margin-bottom: 30px;"></div>
+
+        <!-- Convergence Box -->
+        <div class="convergence-box">
+          <span class="section-tag text-gold">Theoretical Architecture</span>
+          <h3 style="font-size: 1.8rem; margin-bottom: 12px;">The Pedagogical Friction Framework</h3>
+          <p style="color: var(--mjm-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">
+            Pedagogical friction is the intentional preservation of educationally productive resistance necessary for durable learning under conditions where frictionless automation has become increasingly available (Miner, 2026b).
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+            <div style="background: var(--mjm-surface); border: 1px solid var(--mjm-line); padding: 16px; border-radius: var(--radius-sm);">
+              <span class="font-mono text-gold" style="font-weight: 700; font-size: 0.75rem;">THE HEAD</span>
+              <h4 style="font-size: 1.1rem; margin: 4px 0 6px;">Noetic Friction</h4>
+              <p style="font-size: 0.82rem; color: var(--mjm-muted);">Cognitive resistance for schema construction, synthesis, retrieval, and revision.</p>
+            </div>
+            <div style="background: var(--mjm-surface); border: 1px solid var(--mjm-line); padding: 16px; border-radius: var(--radius-sm);">
+              <span class="font-mono text-teal" style="font-weight: 700; font-size: 0.75rem;">THE ROOM</span>
+              <h4 style="font-size: 1.1rem; margin: 4px 0 6px;">Rhetorical Friction</h4>
+              <p style="font-size: 0.82rem; color: var(--mjm-muted);">Dialogic struggle in explaining, defending, and revising claims with human interlocutors.</p>
+            </div>
+            <div style="background: var(--mjm-surface); border: 1px solid var(--mjm-line); padding: 16px; border-radius: var(--radius-sm);">
+              <span class="font-mono text-violet" style="font-weight: 700; font-size: 0.75rem;">THE WORLD</span>
+              <h4 style="font-size: 1.1rem; margin: 4px 0 6px;">Existential Friction</h4>
+              <p style="font-size: 0.82rem; color: var(--mjm-muted);">Embodied intellectual accountability and standing personally behind claims.</p>
+            </div>
+            <div style="background: var(--mjm-surface); border: 1px solid var(--mjm-line); padding: 16px; border-radius: var(--radius-sm);">
+              <span class="font-mono text-blue" style="font-weight: 700; font-size: 0.75rem;">THE SYSTEM</span>
+              <h4 style="font-size: 1.1rem; margin: 4px 0 6px;">Infrastructural Friction</h4>
+              <p style="font-size: 0.82rem; color: var(--mjm-muted);">Policy, assessment, and governance permission structures that make friction sustainable.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 3: Gamified Friction Classifier Lab -->
+      <section id="module-3" class="module-section">
+        <div class="section-header">
+          <span class="section-tag">Module 03 / Gamified Simulation</span>
+          <h2 class="section-heading">Practitioner Friction Classifier Lab</h2>
+          <p class="section-desc">Evaluate realistic K–12 instructional dilemmas. Distinguish Productive Friction from Exclusionary Friction and Unproductive Success.</p>
+        </div>
+
+        <div class="game-lab-container">
+          <div id="scenario-container"></div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 24px;">
+            <button id="lab-next-btn" class="btn-primary">Next Dilemma →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODULE 4: Citation Nexus -->
+      <section id="module-4" class="module-section">
+        <div class="section-header">
+          <span class="section-tag">Module 04 / Theoretical Network</span>
+          <h2 class="section-heading">Scholar Citation Nexus</h2>
+          <p class="section-desc">Explore foundational scholars cited in Chapters 1–3 and inspect how their work anchors the dissertation's theoretical architecture.</p>
+        </div>
+
+        <div class="search-filter-bar">
+          <input id="citation-search" type="search" class="search-input" placeholder="Search by scholar name, title, domain (e.g. Ong, Kapur, Sweller, DisCrit)..." aria-label="Search citation network">
+        </div>
+
+        <div id="citations-grid" class="citations-grid"></div>
+      </section>
+
+      <!-- MODULE 5: Deep Synthesis Reader -->
+      <section id="module-5" class="module-section">
+        <div class="section-header">
+          <span class="section-tag">Module 05 / Primary Text Reader</span>
+          <h2 class="section-heading">Chapters 1–3 Deep Synthesis Reader</h2>
+          <p class="section-desc">Explore key selections and core arguments directly from Micah Miner's final submitted dissertation proposal.</p>
+        </div>
+
+        <div class="reader-tabs">
+          <button class="reader-tab-btn active-tab" data-tab="ch1">Chapter One: Introduction & Purpose</button>
+          <button class="reader-tab-btn" data-tab="ch2">Chapter Two: Literature & Framework</button>
+          <button class="reader-tab-btn" data-tab="ch3">Chapter Three: Methodology & Case Design</button>
+          <button class="reader-tab-btn" data-tab="counter">Counterarguments & Objections</button>
+        </div>
+
+        <div class="reader-content-panel">
+          
+          <!-- Chapter 1 -->
+          <article id="reader-ch1" class="reader-article">
+            <h3>Chapter One: Background, Problem & Purpose</h3>
+            <p>Generative artificial intelligence has moved rapidly from a specialized technical development to a routine feature of school work, teacher planning, student writing, tutoring, communication, and assessment. The fundamental educational problem is what happens to learning when the visible artifact of learning can be produced without the interpretive, rhetorical, and authorial work that education is intended to develop.</p>
+            <div class="callout-box">
+              <strong style="color: var(--mjm-gold);">Three Research Questions:</strong>
+              <ul style="margin-top: 8px; padding-left: 20px; color: var(--mjm-ink);">
+                <li><strong>RQ1:</strong> How do K–12 classroom-facing educators understand and navigate the friction-reducing affordances of generative AI in academic work, particularly in relation to productive and exclusionary friction?</li>
+                <li><strong>RQ2:</strong> What institutional conditions, including policy, assessment design, professional development, leadership disposition, and governance structures, enable or constrain friction-preserving pedagogy across classroom, building, and system levels?</li>
+                <li><strong>RQ3:</strong> What framework-aligned policy language, assessment expectations, and instructional-design supports do K–12 educators and school-system leaders describe as necessary to preserve productive friction while reducing exclusionary friction under conditions of generative AI?</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Chapter 2 -->
+          <article id="reader-ch2" class="reader-article" style="display: none;">
+            <h3>Chapter Two: Review of Literature & Theoretical Framework</h3>
+            <p>Chapter Two establishes the theoretical spine of the study. Extending Walter Ong's media ecology, the paper names the present condition <em>tertiary algorithmicity</em>, a media environment wherein algorithmic systems both curate and generate symbolic content, rendering human authorship optional at scale (Miner, 2026b).</p>
+            <p>To address this condition, the study presents the <strong>Pedagogical Friction Framework</strong>, distinguishing noetic, rhetorical, and existential friction as learner-facing dimensions, and infrastructural friction as the institutional condition of possibility.</p>
+          </article>
+
+          <!-- Chapter 3 -->
+          <article id="reader-ch3" class="reader-article" style="display: none;">
+            <h3>Chapter Three: Methodology and Design</h3>
+            <p>The study uses a <strong>qualitative-dominant convergent mixed methods design</strong> (Creswell &amp; Plano Clark, 2018), notated QUAL + quan. Qualitative inquiry provides the primary means of understanding how participants interpret generative AI, pedagogical friction, learning, authorship, and institutional response, while supporting quantitative evidence describes survey patterns and national context. Constructivism governs the research questions and primary interpretation; pragmatism supplies the narrower mixed methods warrant for bringing several forms of evidence into conversation.</p>
+            <div class="callout-box">
+              <strong style="color: var(--mjm-teal);">Participant Groups and Convergent Logic:</strong>
+              <p style="margin-top: 6px; color: var(--mjm-ink);">The study examines how people in different educational roles interpret and respond to pedagogical friction: (1) classroom-facing educators, (2) building-level administrators, and (3) district or system-level leaders, with adult university students contributing a retrospective learner perspective analyzed as a distinct participant perspective. A convergent design lets these sources be collected during the same period, analyzed by methods appropriate to each, and integrated through joint displays and narrative discussion. It does not seek causal effects or statistical generalization.</p>
+            </div>
+          </article>
+
+          <!-- Counterarguments -->
+          <article id="reader-counter" class="reader-article" style="display: none;">
+            <h3>Counterarguments & Framework Limits</h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="background: var(--mjm-surface-2); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--mjm-line);">
+                <h4 style="color: var(--mjm-gold);">1. Cognitive Augmentation Objection (Mollick, 2024; Riva, 2025)</h4>
+                <p><strong>Objection:</strong> AI functions as an intellectual co-pilot extending human cognition like writing or calculators.</p>
+                <p><strong>Rebuttal:</strong> Tools extend expert cognition only after baseline schemas exist. Routine AI reliance during novice formation prevents building foundational schemas required for expertise.</p>
+              </div>
+              <div style="background: var(--mjm-surface-2); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--mjm-line);">
+                <h4 style="color: var(--mjm-rust);">2. Technological Determinism Objection (Feenberg, 2002)</h4>
+                <p><strong>Objection:</strong> Claiming tertiary algorithmicity dictates outcomes overstates medium power and ignores human agency.</p>
+                <p><strong>Rebuttal:</strong> Naming pedagogical friction as an intentional instructional response asserts human agency within a powerful default rather than treating the default as destiny.</p>
+              </div>
+              <div style="background: var(--mjm-surface-2); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--mjm-line);">
+                <h4 style="color: var(--mjm-violet);">3. Rigor as Gatekeeping Objection (Dolmage, 2017; Annamma et al., 2013)</h4>
+                <p><strong>Objection:</strong> Demanding struggle and friction risks preserving exclusionary barriers that penalize disabled or multilingual learners.</p>
+                <p><strong>Rebuttal:</strong> The framework sets a strict equity boundary: remove exclusionary friction (accessibility barriers) while intentionally preserving productive friction (schema construction).</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- MODULE 6: Reflection Handoff & Summary -->
+      <section id="module-6" class="module-section">
+        <div class="section-header">
+          <span class="section-tag">Module 06 / Academic Output</span>
+          <h2 class="section-heading">Reflection Audit Trail & Academic Handoff</h2>
+          <p class="section-desc">Generate a clean, exportable reflection summary of your interaction with the Pedagogical Friction Framework for doctoral colloquia or committee review.</p>
+        </div>
+
+        <div class="reflection-summary-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; border-bottom: 1px solid var(--mjm-line); padding-bottom: 16px;">
+            <div>
+              <span class="font-mono text-gold" style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Academic Reflection Handoff</span>
+              <h3 style="font-size: 1.6rem; margin-top: 4px;">Pedagogical Friction Framework Audit</h3>
+            </div>
+            <button id="export-reflection-btn" class="btn-primary">🖨️ Print / Save Handoff PDF</button>
+          </div>
+
+          <div style="line-height: 1.7; color: var(--mjm-ink);">
+            <p><strong>Study Title:</strong> Pedagogical Friction in the Age of Generative AI and Tertiary Algorithmicity</p>
+            <p><strong>Researcher:</strong> Micah J. Miner (National Louis University Ed.D. Candidate)</p>
+            <p><strong>Methodological Orientation:</strong> Qualitative-Dominant Convergent Mixed Methods Study, QUAL + quan (Creswell &amp; Plano Clark, 2018)</p>
+            
+            <div style="margin-top: 24px; background: var(--mjm-surface-2); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--mjm-line);">
+              <h4 style="font-family: var(--mjm-mono); font-size: 0.85rem; text-transform: uppercase; color: var(--mjm-teal); margin-bottom: 10px;">Simulation Disclaimer</h4>
+              <p style="font-size: 0.88rem; color: var(--mjm-muted);">*Note: All scores and scenario calibrations in this application are illustrative pedagogical simulation tools designed for academic reflection and framework exploration. They do not constitute validated psychometric measures or statistical claims of learning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Modal Dialog -->
+    <div id="citation-modal" class="modal-overlay" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="shell-container footer-inner">
+        <div>
+          <span>© 2026 Micah J. Miner · National Louis University Ed.D. Research Ecosystem</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://minerclass.github.io/" target="_blank" rel="noopener">GitHub Ecosystem</a> · 
+          <a href="https://micahminer.com/" target="_blank" rel="noopener">micahminer.com</a> · 
+          <a href="https://github.com/minerclass" target="_blank" rel="noopener">minerclass GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/lit_data.js"></script>
+  <script src="js/scenarios.js"></script>
+  <script src="js/citations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
