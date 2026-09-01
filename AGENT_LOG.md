@@ -19,6 +19,17 @@ here, in the repository, not in a local file.
 
 ---
 
+## 2026-08-31 - Link the shared token file
+
+This page already defines the `--mjm-*` names locally with the canonical values, so it
+needs no remapping and nothing changes visually: the local `:root` comes after the linked
+file and still wins.
+
+The link means later additions to the shared file - the paper-ground accent inks, the
+radius, measure, and focus-ring tokens - become available here without duplicating them.
+
+---
+
 ## 2026-08-31 - Honour prefers-reduced-motion
 
 Found during an accessibility sweep across the dissertation ecosystem.
